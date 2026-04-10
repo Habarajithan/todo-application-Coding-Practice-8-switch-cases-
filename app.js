@@ -113,7 +113,7 @@ app.get('/todos/:todoId/', async (request, response) => {
   response.send(todo)
 })
 
-//API 3
+//API 3->Create a todo in the todo table,
 app.post('/todos/', async (request, response) => {
   const {id, todo, priority, status} = request.body
 
@@ -133,7 +133,7 @@ app.post('/todos/', async (request, response) => {
   response.send('Todo Successfully Added')
 })
 
-//API 3
+//API 4->Updates the details of a specific todo based on the todo ID
 app.put('/todos/:todoId/', async (request, response) => {
   const {todoId} = request.params
 
@@ -187,7 +187,7 @@ app.put('/todos/:todoId/', async (request, response) => {
   respond.send(`${updateColumn} Updated`)
 })
 
-//API 5
+//API 5->Deletes a todo from the todo table based on the todo ID
 app.delete('/todos/:todoId/', async (request, response) => {
   const {todoId} = request.params
 
